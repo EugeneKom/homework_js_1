@@ -31,15 +31,18 @@ buttonRemoveAllEl.addEventListener('click',() => destroyBoxes())
 function createBoxes(amount) {
   
   let counterSize = 30;
+  const newBox = [];
 
   for (let i = 0; i < amount; i += 1) {
-    const newBox = document.createElement('div')
+    const item = document.createElement('div')
   
     counterSize += 10;
 
-    newBox.style.backgroundColor = `${getRandomHexColor()}`
-    newBox.style.width = `${counterSize}px`
-    newBox.style.height = `${counterSize}px`
-    boxShell.append(newBox)
+    item.style.backgroundColor = `${getRandomHexColor()}`
+    item.style.width = `${counterSize}px`
+    item.style.height = `${counterSize}px`
+    newBox.push(item)  
   } 
+  
+   boxShell.append(...newBox)
 }
