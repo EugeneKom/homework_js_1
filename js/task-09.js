@@ -10,8 +10,9 @@ function getRandomHexColor() {
 
 
 function onButtonClickChangeColor() {
-  bodyEl.style.backgroundColor = `${getRandomHexColor()}`
-  textOfCurrentColor.textContent = getRandomHexColor()
+  const currentColor = getRandomHexColor();
+  bodyEl.style.backgroundColor = `${currentColor}`
+  textOfCurrentColor.textContent = currentColor
 }
 
 

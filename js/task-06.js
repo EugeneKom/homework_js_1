@@ -3,7 +3,7 @@ const inputEl = document.getElementById('validation-input')
 const valueOfValidation = inputEl.getAttribute('data-length')
 
 const onInputFocusOff = (input) => {
-    if (input.value.length >= valueOfValidation) {
+    if (input.value.length >= valueOfValidation && input.value.length <= valueOfValidation) {
         input.classList.add('valid')
         input.classList.remove('invalid')
     }

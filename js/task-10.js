@@ -30,7 +30,7 @@ buttonRemoveAllEl.addEventListener('click',() => destroyBoxes())
 
 function createBoxes(amount) {
   
-  let counterSize = 30;
+  let counterSize = 20;
   const newBox = [];
 
   for (let i = 0; i < amount; i += 1) {
