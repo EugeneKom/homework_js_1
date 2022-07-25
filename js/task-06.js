@@ -1,11 +1,11 @@
 const inputEl = document.getElementById('validation-input')
 
-const valueOfValidation = inputEl.dataset.length
+const valueOfValidation = +inputEl.dataset.length
 
 console.log(valueOfValidation)
 
 const onInputFocusOff = (input) => {
-    if (input.value.length === Number(valueOfValidation)) {
+    if (input.value.length === valueOfValidation) {
         input.classList.add('valid')
         input.classList.remove('invalid')
     }
